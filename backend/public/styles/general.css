@@ -1,0 +1,397 @@
+/* 🌐 Smooth scrolling for whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* 🌍 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* 🌐 Navbar */
+header {
+  background: #004080;
+  color: white;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+nav .logo a:hover {
+  color: #ffd700;
+}
+
+nav .logo img {
+  height: 50px; 
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 50%;
+}
+
+nav .logo img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffd700;
+}
+
+/* ✨ Donate button animation */
+.donate-btn {
+  background: #ffd700;
+  color: #1a1a1a;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffd700;
+}
+
+/* 🔔 Pulse animation */
+.donate-btn.attention {
+  animation: donatePulse 2s infinite;
+}
+
+@keyframes donatePulse {
+  0% { transform: scale(1); box-shadow: 0 0 5px #ffd700; }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px #ffd700; }
+  100% { transform: scale(1); box-shadow: 0 0 5px #ffd700; }
+}
+
+
+.donate-btn:hover {
+  background: #ffa500;
+  color: white;
+}
+
+/* 🌟 Hero Section */
+/* 🌟 Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+  position: relative;
+  transition: background 1s ease-in-out; /* smooth slideshow transition */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); /* dark overlay for readability */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+#typing-text {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  min-height: 60px; /* reserve space to avoid jumping */
+  white-space: nowrap;
+  border-right: 2px solid #ffd700;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+  margin: 0 0.5rem;
+}
+
+/* 🎨 Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: #004080;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #00264d;
+}
+
+.btn-secondary {
+  background: #ffd700;
+  color: #004080;
+}
+
+.btn-secondary:hover {
+  background: #ffa500;
+  color: white;
+}
+
+.hero-btn1 { 
+  width: 140px;
+}
+
+.hero-btn2 {
+  width: 120px;
+}
+
+/* 🏢 About Section */
+.about {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* 🔬 Services */
+.services {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f1f5f9;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* 🌱 Programs */
+.programs {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.stat {
+  background: #004080;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  min-width: 120px;
+  font-size: 1.1rem;
+}
+
+/* 🔥 Glow animation for impact stats */
+.stat {
+  padding: 20px;
+  border-radius: 10px;
+  background: #004080;
+  transition: box-shadow 0.3s ease;
+}
+
+.stat.glow {
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700;
+  }
+  to {
+    box-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700;
+  }
+}
+
+
+/* 🤝 Get Involved */
+.get-involved {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f1f5f9;
+}
+
+.involved-buttons .btn {
+  margin: 0.5rem;
+}
+
+/* 📞 Footer */
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+footer .socials a {
+  color: #ffd700;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  color: #ffa500;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* we can add a hamburger menu later with JS */
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .impact-stats {
+    flex-direction: column;
+  }
+}
+/* 📱 Mobile Menu */
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #004080;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.menu-btn.open {
+  color: #ffd700;
+}
+
+/* ⬆️ Scroll-to-Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #004080;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.scroll-to-top:hover {
+  background: #00264d;
+}
+
+/* ✨ Fade-in Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* 📱 Responsive for small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
+
+.all-services-btn {
+  margin-top: 15px;
+}
