@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (err) {
       console.error('Contact submit error', err);
       showMessage('Unable to send message. Try again later.', 'error');
+      statusEl.style.color = "red";
     }
   });
 
@@ -80,7 +81,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     }
   } catch (err) {
     console.error(err);
-    statusEl.textContent = "❌ Network or server error. Try again.";
-    statusEl.style.color = "red";
+    statusEl.textContent = "❌ Network or server error. Please reach out to us at whri.services@gmail.com";
+    statusEl.style.color = "orange";
   }
 });
