@@ -41,7 +41,8 @@
 .about-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ffd700;
+  margin-top: 20px;
+  color: #1a1a1a;
 }
 
 .about-section p {

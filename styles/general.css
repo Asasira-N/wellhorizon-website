@@ -60,6 +60,13 @@ nav .logo img:hover {
   transform: scale(1.05);
 }
 
+.tagline {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #f4a14e;
+  /* color: #ffd700; */
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -112,7 +119,7 @@ nav .logo img:hover {
 /* 🌟 Hero Section */
 /* 🌟 Hero Section */
 .hero {
-  height: 80vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +198,7 @@ nav .logo img:hover {
 }
 
 .hero-btn2 {
-  width: 120px;
+  width: 140px;
   font-size: 0.58rem;
 }
 
