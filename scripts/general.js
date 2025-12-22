@@ -50,7 +50,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 (() => {
   const hero = document.querySelector(".hero");
   if (!hero) return;
-  const heroImages = ["../assets/hero1.webp", "../assets/hero4.webp", "../assets/hero5.webp", "../assets/hero6.webp", "../assets/hero7.webp"]; // your images
+  const heroImages = ["../assets/hero1.webp", "../assets/hero4.webp","../assets/hero8.jpg", "../assets/hero5.webp", "../assets/hero6.webp", "../assets/hero7.webp"]; // your images
   let i = 0;
   const change = () => {
     hero.style.background = `url('${heroImages[i]}') center/cover no-repeat`;
